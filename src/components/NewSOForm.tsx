@@ -2,7 +2,6 @@ import { FormEvent, useContext, useEffect, useRef, useState } from "react";
 import "./NewSOForm.css";
 import { addShoutout } from "../services/shoutoutApiService";
 import AuthContext from "../context/AuthContext";
-import { escapeLeadingUnderscores } from "typescript";
 import { storage } from "../firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Shoutout from "../models/Shoutout";

@@ -4,12 +4,9 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import React, { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import "./App.css";
-import ListOfShoutouts from "./components/ListOfShoutouts";
-import Shoutout from "./models/Shoutout";
-import { getAllShoutouts } from "./services/shoutoutApiService";
-import NewSOForm from "./components/NewSOForm";
+
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Details from "./components/Details";

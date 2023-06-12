@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-  getAllShoutouts,
-  getShoutoutsByName,
-} from "../services/shoutoutApiService";
+import { getShoutoutsByName } from "../services/shoutoutApiService";
 import "./Details.css";
 import ListOfShoutouts from "./ListOfShoutouts";
 import Shoutout from "../models/Shoutout";
@@ -22,15 +19,22 @@ const Details = () => {
   };
 
   useEffect(() => {
-    updateShoutouts();
+    getShoutoutsByName(name).then((res) => {
+      setUserShoutouts(res);
+      console.log(res);
+    });
   }, []);
   return (
     <div className="Details">
       <Link to={`/`}>
         <p>Back to all Shoutouts</p>
       </Link>
-      <NewSOForm update={updateShoutouts} name={name}/>
-      <ListOfShoutouts shoutouts={userShoutouts} name={name} update={updateShoutouts} />
+      <NewSOForm update={updateShoutouts} name={name} />
+      <ListOfShoutouts
+        shoutouts={userShoutouts}
+        name={name}
+        update={updateShoutouts}
+      />
     </div>
   );
 };

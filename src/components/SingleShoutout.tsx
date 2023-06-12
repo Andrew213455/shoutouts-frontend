@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import AuthContext from "../context/AuthContext";
 import Shoutout from "../models/Shoutout";
 import "./SingleShoutout.css";
 import { Link } from "react-router-dom";
@@ -11,8 +9,6 @@ interface Props {
 }
 
 const SingleShoutout = ({ shoutout, update }: Props) => {
-  const { user } = useContext(AuthContext);
-
   const deleteHandler = (): void => {
     deleteOneShoutout(shoutout._id!).then((res) => {
       console.log(res);
@@ -30,7 +26,7 @@ const SingleShoutout = ({ shoutout, update }: Props) => {
       </Link>
       <p>{shoutout.text}</p>
       {shoutout.shoutoutPhoto && (
-        <img src={shoutout.shoutoutPhoto} alt="shoutout photo" />
+        <img src={shoutout.shoutoutPhoto} alt="shoutout" />
       )}
       <button onClick={deleteHandler}>delete</button>
     </li>
