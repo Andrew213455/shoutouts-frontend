@@ -23,7 +23,7 @@ const Details = () => {
       setUserShoutouts(res);
       console.log(res);
     });
-  }, []);
+  }, [name]);
   return (
     <div className="Details">
       <Link to={`/`}>
