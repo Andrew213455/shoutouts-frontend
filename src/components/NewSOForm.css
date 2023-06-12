@@ -1,0 +1,25 @@
+.NewSOForm {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 0 20px 20px 20px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+}
+
+.NewSOForm button {
+  padding: 5px;
+  width: fit-content;
+  margin: 15px 0;
+  border-radius: 5px;
+  background-color: white;
+  border: 1.5px solid #aaa;
+}
+
+.NewSOForm input {
+  margin-bottom: 10px;
+}
+
+.NewSOForm label {
+  font-weight: bold;
+}

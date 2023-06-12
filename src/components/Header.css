@@ -1,0 +1,33 @@
+.HeaderCon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header h1 {
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.Header button {
+  height: fit-content;
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 3px;
+}
+
+.Header .welcome {
+  display: flex;
+  line-height: 2px;
+}
+
+.Header img {
+  width: 20px;
+  padding-top: 5px;
+  margin-right: 10px;
+}
+
+.Header p {
+  margin-right: 5px;
+}

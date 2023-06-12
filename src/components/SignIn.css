@@ -1,0 +1,8 @@
+.SignIn button {
+  height: fit-content;
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 3px;
+}
